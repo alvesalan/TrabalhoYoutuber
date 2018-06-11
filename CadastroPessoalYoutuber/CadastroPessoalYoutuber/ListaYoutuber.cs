@@ -23,9 +23,28 @@ namespace CadastroPessoalYoutuber
         private void AtualizarListaYoutuber()
         {
             CadastroPessoal cadastropessoal = new CadastroPessoal();
+            string Login = cadastropessoal.GetLogin();
+            string Senha = cadastropessoal.GetSenha();
+            string Senha2 = cadastropessoal.GetSenha2();
             string Name = cadastropessoal.GetNome();
             string Sobrenome = cadastropessoal.GetSobrenome();
-            string NickName = cadastropessoal.GetNickName();          
+            string NickName = cadastropessoal.GetNickName();
+            string Nacionalidade = cadastropessoal.GetNacionalidade();
+            int Idade = cadastropessoal.GetIdade();
+            double RendaMensal = cadastropessoal.GetRendaMensal();
+            string NomeDoCanal = cadastropessoal.GetNomeDoCanal();
+            string Categoria = cadastropessoal.GetCategoria();
+            string PlataformaJogo = cadastropessoal.GetPlataformaJogo();
+            int QuantidadesDeInscritos = cadastropessoal.GetQuantidadeDeIncritos();
+            int QuantidadeDeVisualizacoes = cadastropessoal.GetQuantidadeDeVisualizacoes();
+            int QuantidadeMediaDeLikesPorVideo = cadastropessoal.GetQuantidadeMediaDeLikesPorVideo;
+            int QuantidadeVideos = cadastropessoal.GetQuantidadeVideos();
+            bool PossueLive = cadastropessoal.GetPossueLive();
+            bool CanalMonetizado = cadastropessoal.GetCanalMonetizado();
+            bool PossuePatrocinador = cadastropessoal.GetPossuePatrocinador();
+            int QuantidadeStricker = cadastropessoal.GetQuantidadeStricker();
+            string Link = cadastropessoal.GetLink();
+            string Descricao = cadastropessoal.GetDescricao();
            
         }
         private void txtNome_TextChanged(object sender, EventArgs e)
@@ -149,6 +168,11 @@ namespace CadastroPessoalYoutuber
 
 
 
+
+        }
+
+        private void radioButton5_CheckedChanged(object sender, EventArgs e)
+        {
 
         }
 

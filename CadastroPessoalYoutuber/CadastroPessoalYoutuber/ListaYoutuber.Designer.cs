@@ -667,6 +667,7 @@
             this.radioButton5.TabStop = true;
             this.radioButton5.Text = "SIM";
             this.radioButton5.UseVisualStyleBackColor = false;
+            this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
             // 
             // radioButton6
             // 
