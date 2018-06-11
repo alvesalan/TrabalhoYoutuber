@@ -10,9 +10,13 @@ namespace CadastroPessoalYoutuber
     public class CadastroPessoal
     {
         public string A = "";
+
+
         private string Login;
         private string Senha;
         private string Senha2;
+
+
         private string Nome;
         private string Sobrenome;
         private string NickName;
@@ -32,9 +36,6 @@ namespace CadastroPessoalYoutuber
         public int QuantidadeStricker;
         public string Link;
         public string Descricao;
-
-
-
 
 
 
@@ -73,12 +74,94 @@ namespace CadastroPessoalYoutuber
         {
             this.NickName = nickname;
         }
+        public void SetNacionalidade(string nacionalidade)
+        {
+            this.Nacionalidade = nacionalidade;
+        }
+        public void SetIdade(int idade)
+        {
+            this.Idade = idade;
+        }
+        public void SetRendaMensal(double rendamensal)
+        {
+            this.RendaMensal = rendamensal;
+        }
+        public void SetNomeDoCanal(string nomedocanal)
+        {
+            this.NomeDoCanal = nomedocanal;
+        }
+        public void SetCategoria(string categoria)
+        {
+            this.Categoria = categoria;
+        }
+        public void SetPlataformaJogo(string plataformajogo)
+        {
+            this.PlataformaJogo = plataformajogo;
+        }
+        public void SetQuantidadeDeInscritos(int quantidadedeinscritos)
+        {
+            this.QuantidadesDeInscritos = quantidadedeinscritos;          
+        }
+        public void SetQuantidadeDeVisualizacoes(int quantidadedevisualizacoes)
+        {
+            this.QuantidadeDeVisualizacoes = quantidadedevisualizacoes;
+        }
+        public void SetQuantidadeMediaDeLikesPorVideo(int quantidademediadelikesporvideo)
+        {
+            this.QuantidadeMediaDeLikesPorVideo = quantidademediadelikesporvideo;
+        }
+        public void SetQuantidadeVideos(int quantidadedevideos)
+        {
+            this.QuantidadeVideos = quantidadedevideos;
+        }
+        public void SetPossueLive(bool possuelive)
+        {
+            this.PossueLive = possuelive;
+        }
+        public void SetCanalMonetizado(bool canalmonetizado)
+        {
+            this.CanalMonetizado = canalmonetizado;
+        }
+        public void SetPossuePatrocinador(bool possuepatricinador)
+        {
+            this.PossuePatrocinador = possuepatricinador;
+        }
+        public void SetQuantidadeStricker(int quantidadestricker)
+        {
+            this.QuantidadeStricker = quantidadestricker;
+        }
+        public void SetLink(string link)
+        {
+            this.Link = link;
+        }
+        public void SetDescricao(string descricao)
+        {
+            this.Descricao = descricao;
+        }
+
+
 
         public string GetLogin() { return Login; }
         public string GetSenha() { return Senha; }
         public string GetNome() { return Nome; }
         public string GetSobrenome() { return Sobrenome; }
         public string GetNickName() { return NickName; }
+        public string GetNacionalidade(){return Nacionalidade;}
+        public int GetIdade() { return Idade; }
+        public double GetRendaMensal() { return RendaMensal;}
+        public string GetNomeDoCanal() {return NomeDoCanal ;}
+        public string GetCategoria() { return Categoria;}
+        public string GetPlataformaJogo() {return PlataformaJogo ;}
+        public int GetQuantidadesDeInscritos() {return QuantidadesDeInscritos ;}
+        public int GetQuantidadeDeVisualizacoes() {return QuantidadeDeVisualizacoes ;}
+        public int GetQuantidadeMediaDeLikesPorVideo() {return QuantidadeMediaDeLikesPorVideo ;}
+        public int GetQuantidadeVideos() {return QuantidadeVideos ;}
+        public bool GetPossueLive() { return PossueLive; }
+        public bool GetCanalMonetizado() { return CanalMonetizado; }
+        public bool GetPossuePatrocinador() { return PossuePatrocinador; }
+        public int GetQuantidadeStricker() { return QuantidadeStricker; }
+        public string GetLink() { return Link; }
+        public string GetDescricao() { return Descricao; }
 
     }
 }
