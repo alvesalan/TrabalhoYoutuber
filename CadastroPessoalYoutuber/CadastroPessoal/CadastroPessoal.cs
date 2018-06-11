@@ -15,8 +15,6 @@ namespace CadastroPessoalYoutuber
         private string Login;
         private string Senha;
         private string Senha2;
-
-
         private string Nome;
         private string Sobrenome;
         private string NickName;
@@ -30,12 +28,12 @@ namespace CadastroPessoalYoutuber
         private int QuantidadeDeVisualizacoes;
         private int QuantidadeMediaDeLikesPorVideo;
         private int QuantidadeVideos;
-        public bool PossueLive;
-        public bool CanalMonetizado;
-        public bool PossuePatrocinador;
-        public int QuantidadeStricker;
-        public string Link;
-        public string Descricao;
+        private bool PossueLive;
+        private bool CanalMonetizado;
+        private bool PossuePatrocinador;
+        private int QuantidadeStricker;
+        private string Link;
+        private string Descricao;
 
 
 
@@ -163,5 +161,9 @@ namespace CadastroPessoalYoutuber
         public string GetLink() { return Link; }
         public string GetDescricao() { return Descricao; }
 
+
+
+
+                 
     }
 }

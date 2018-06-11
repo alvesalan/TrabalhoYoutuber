@@ -88,12 +88,28 @@ namespace CadastroPessoalYoutuber
             try
             {
 
-                cadastropessoal.SetLogin(txtLogin.Text);
-                cadastropessoal.SetSenha(txtSenha.Text);
-                cadastropessoal.SetSenha2(txtSenha2.Text);
-                cadastropessoal.SetNome(txtNome.Text);
-                cadastropessoal.SetSobrenome(txtSobrenome.Text);
-                cadastropessoal.SetNickName(txtNickName.Text);
+                cadastropessoal.SetLogin();
+                cadastropessoal.SetSenha();
+                cadastropessoal.SetSenha2();
+                cadastropessoal.SetNome();
+                cadastropessoal.SetSobrenome();
+                cadastropessoal.SetNickName();
+                cadastropessoal.SetNacionalidade();
+                cadastropessoal.SetIdade();
+                cadastropessoal.SetRendaMensal();
+                cadastropessoal.SetNomeDoCanal();
+                cadastropessoal.SetCategoria();
+                cadastropessoal.SetPlataformaJogo();
+                cadastropessoal.SetQuantidadeDeIncritos();
+                cadastropessoal.SetQuantidadeDeVisualizacoes();
+                cadastropessoal.SetQuantidadeMediaDeLikesPorVideo();
+                cadastropessoal.SetQuantidadeVideos();
+                cadastropessoal.SetPossueLive();
+                cadastropessoal.SetCanalMonetizado();
+                cadastropessoal.SetPossuePatrocinador();
+                cadastropessoal.SetQuantidadeStricker();
+                cadastropessoal.SetLink();
+                cadastropessoal.SetDescricao();
             }
             catch (Exception ex)
             {
