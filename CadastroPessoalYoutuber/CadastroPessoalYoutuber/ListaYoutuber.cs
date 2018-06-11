@@ -53,8 +53,10 @@ namespace CadastroPessoalYoutuber
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+
+        
             if (txtSenha2.Text != txtSenha.Text)
             {
                 MessageBox.Show("Senhas não se coicidem !!");
@@ -149,5 +151,7 @@ namespace CadastroPessoalYoutuber
 
 
         }
+
+       
     }
 }

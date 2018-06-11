@@ -16,6 +16,27 @@ namespace CadastroPessoalYoutuber
         private string Nome;
         private string Sobrenome;
         private string NickName;
+        private string Nacionalidade;
+        private int Idade;
+        private double RendaMensal;
+        private string NomeDoCanal;
+        private string Categoria;
+        private string PlataformaJogo;
+        private int QuantidadesDeInscritos;
+        private int QuantidadeDeVisualizacoes;
+        private int QuantidadeMediaDeLikesPorVideo;
+        private int QuantidadeVideos;
+        public bool PossueLive;
+        public bool CanalMonetizado;
+        public bool PossuePatrocinador;
+        public int QuantidadeStricker;
+        public string Link;
+        public string Descricao;
+
+
+
+
+
 
         public void SetLogin(string login)
         {
