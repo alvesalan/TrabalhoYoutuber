@@ -39,9 +39,9 @@ namespace CadastroPessoalYoutuber
             int QuantidadeDeVisualizacoes = cadastropessoal.GetQuantidadeDeVisualizacoes();
             int QuantidadeMediaDeLikesPorVideo = cadastropessoal.GetQuantidadeMediaDeLikesPorVideo();
             int QuantidadeVideos = cadastropessoal.GetQuantidadeVideos();
-            bool PossueLive = cadastropessoal.GetPossueLive();
-            bool CanalMonetizado = cadastropessoal.GetCanalMonetizado();
-            bool PossuePatrocinador = cadastropessoal.GetPossuePatrocinador();
+            string PossueLive = cadastropessoal.GetPossueLive();
+            string CanalMonetizado = cadastropessoal.GetCanalMonetizado();
+            string PossuePatrocinador = cadastropessoal.GetPossuePatrocinador();
             int QuantidadeStricker = cadastropessoal.GetQuantidadeStricker();
             string Link = cadastropessoal.GetLink();
             string Descricao = cadastropessoal.GetDescricao();
@@ -85,10 +85,39 @@ namespace CadastroPessoalYoutuber
 
 
             CadastroPessoal cadastropessoal = new CadastroPessoal();
-            
+
+
+            string SimCanalMonetizado;
+            string SimPossueLive;
+            string SimPossuePatrocinador;
             try
             {
+                if (rbSimCanalMonetizado.Checked == true)
+	            {
+                     SimCanalMonetizado = "Sim";
+	            }
+                else
+                {
+                     SimCanalMonetizado = "Não";
+                }
 
+                if (rbNaoPossueLive.Checked == true)
+                {
+                    SimPossueLive = "Sim";
+                }
+                else
+                {
+                    SimPossueLive = "Não";
+                }
+
+                if (rbSimPossuePatrocinador.Checked == true)
+                {
+                    SimPossuePatrocinador = "Sim";
+                }
+                else
+                {
+                    SimPossuePatrocinador = "Não";
+                }
                 cadastropessoal.SetLogin(txtLogin.Text);
                 cadastropessoal.SetSenha(txtSenha.Text);
                 cadastropessoal.SetSenha2(txtSenha2.Text);
@@ -96,7 +125,7 @@ namespace CadastroPessoalYoutuber
                 cadastropessoal.SetSobrenome(txtSobrenome.Text);
                 cadastropessoal.SetNickName(txtNickName.Text);
                 cadastropessoal.SetNacionalidade(cbNacionalidade.SelectedItem.ToString());
-              //  cadastropessoal.SetIdade(nudIdade.Value.ToString());
+                cadastropessoal.SetIdade(Convert.ToInt32(nudIdade.Value.ToString()));
                 cadastropessoal.SetRendaMensal(Convert.ToDouble(txtRenda.Text));
                 cadastropessoal.SetNomeDoCanal(txtNomeCanal.Text);
                 cadastropessoal.SetCategoria(cbCategoria.SelectedItem.ToString());
@@ -105,9 +134,9 @@ namespace CadastroPessoalYoutuber
                 cadastropessoal.SetQuantidadeDeVisualizacoes(Convert.ToInt32(txtQuantidadeVisualizacoes.Text));
                 cadastropessoal.SetQuantidadeMediaDeLikesPorVideo(Convert.ToInt32(txtQuantidadeMediaLikes.Text));
                 cadastropessoal.SetQuantidadeVideos(Convert.ToInt32(txtQuantidadeVideos.Text));
-               // cadastropessoal.SetPossueLive(rbSimPossueLive);
-               // cadastropessoal.SetCanalMonetizado(rbSimCanalMonetizado);
-               // cadastropessoal.SetPossuePatrocinador(rbSimPossuePatrocinador);
+                cadastropessoal.SetPossueLive(Convert.ToString(SimPossueLive));
+                cadastropessoal.SetCanalMonetizado(Convert.ToString(SimCanalMonetizado));
+                cadastropessoal.SetPossuePatrocinador(Convert.ToString(SimPossuePatrocinador));
                   cadastropessoal.SetQuantidadeStricker(Convert.ToInt32(txtQuantidadeDeStrinker.Text));
                 cadastropessoal.SetLink(txtLink.Text);
                 cadastropessoal.SetDescricao(txtDescricao.Text);
@@ -139,56 +168,14 @@ namespace CadastroPessoalYoutuber
         {
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
 
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbPlataformaJogo_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

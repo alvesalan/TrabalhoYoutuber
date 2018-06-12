@@ -28,9 +28,9 @@ namespace CadastroPessoalYoutuber
         private int QuantidadeDeVisualizacoes;
         private int QuantidadeMediaDeLikesPorVideo;
         private int QuantidadeVideos;
-        private bool PossueLive;
-        private bool CanalMonetizado;
-        private bool PossuePatrocinador;
+        private string PossueLive;
+        private string CanalMonetizado;
+        private string PossuePatrocinador;
         private int QuantidadeStricker;
         private string Link;
         private string Descricao;
@@ -121,15 +121,15 @@ namespace CadastroPessoalYoutuber
         {
             this.QuantidadeVideos = quantidadedevideos;
         }
-        public void SetPossueLive(bool possuelive)
+        public void SetPossueLive(string possuelive)
         {
             this.PossueLive = possuelive;
         }
-        public void SetCanalMonetizado(bool canalmonetizado)
+        public void SetCanalMonetizado(string canalmonetizado)
         {
             this.CanalMonetizado = canalmonetizado;
         }
-        public void SetPossuePatrocinador(bool possuepatricinador)
+        public void SetPossuePatrocinador(string possuepatricinador)
         {
             this.PossuePatrocinador = possuepatricinador;
         }
@@ -164,9 +164,9 @@ namespace CadastroPessoalYoutuber
         public int GetQuantidadeDeVisualizacoes() {return QuantidadeDeVisualizacoes ;}
         public int GetQuantidadeMediaDeLikesPorVideo() {return QuantidadeMediaDeLikesPorVideo ;}
         public int GetQuantidadeVideos() {return QuantidadeVideos ;}
-        public bool GetPossueLive() { return PossueLive; }
-        public bool GetCanalMonetizado() { return CanalMonetizado; }
-        public bool GetPossuePatrocinador() { return PossuePatrocinador; }
+        public string GetPossueLive() { return PossueLive; }
+        public string GetCanalMonetizado() { return CanalMonetizado; }
+        public string GetPossuePatrocinador() { return PossuePatrocinador; }
         public int GetQuantidadeStricker() { return QuantidadeStricker; }
         public string GetLink() { return Link; }
         public string GetDescricao() { return Descricao; }

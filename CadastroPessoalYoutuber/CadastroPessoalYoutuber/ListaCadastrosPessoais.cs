@@ -10,8 +10,12 @@ using System.Windows.Forms;
 
 namespace CadastroPessoalYoutuber
 {
+    [Serializable]
     public partial class ListaCadastrosPessoais : Form
     {
+       
+        
+
         public ListaCadastrosPessoais()
         {
             InitializeComponent();
@@ -23,6 +27,11 @@ namespace CadastroPessoalYoutuber
         }
 
         private void ListaCadastrosPessoais_Load(object sender, EventArgs e)
+        {
+            AtualizarListaYoutubers();
+        }
+
+        private void AtualizarListaYoutubers()
         {
             CadastroPessoalRepositorio tudo = new CadastroPessoalRepositorio();
             foreach (CadastroPessoal cadastropessoal in tudo.ObterPersonagens())
@@ -52,6 +61,65 @@ namespace CadastroPessoalYoutuber
                 cadastropessoal.GetDescricao()
                                 
                 });
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CadastroPessoalRepositorio tudo = new CadastroPessoalRepositorio();
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Selecione um registro para que seja possível apagar");
+                return;
+            }
+
+            string codigo = Convert.ToString((dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString()));
+            for (int i = 0; i < tudo.ObterPersonagem().cadastropessoal.Count(); i++)
+            {
+                CadastroPessoal cadastropessoal = cadastroPessoals[i];
+                if (cadastropessoal.GetNomeDoCanal() == codigo)
+                {
+                    CadastroPessoal.cadastroPessoals.Remove(cadastropessoal);
+                    AtualizarListaYoutubers();
+                    MessageBox.Show(cadastropessoal.GetNome() + " apagado com sucesso");
+                    return;
+                }
+
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Selecione um registro para que seja possível editar");
+                return;
+            }
+            string codigo = Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString());
+            new ListaYoutuber(codigo).ShowDialog();
+        }
+
+        private void btnApagarAluno_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Selecione um registro para que seja possível apagar");
+                return;
+            }
+
+            string codigo = Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString());
+            for (int i = 0; i < CadastroPessoalRepositorio.tudo.Count(); i++)
+            {
+                CadastroPessoal cadastropessoal = CadastroPessoal.cadastroPessoals[i];
+                if (cadastropessoal.GetNome() == codigo)
+                {
+                    Program.alunos.Remove(aluno);
+                    PopularListaAlunos();
+                    MessageBox.Show(cadastropessoal.GetNome() + " apagado com sucesso");
+                    return;
+                }
+
             }
         }
     }

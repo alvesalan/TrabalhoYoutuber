@@ -50,6 +50,8 @@
             this.ColumnQuantidadeStricker = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnLink = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,7 +88,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(893, 434);
+            this.dataGridView1.Size = new System.Drawing.Size(941, 434);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -237,11 +239,38 @@
             this.ColumnDescricao.ReadOnly = true;
             this.ColumnDescricao.Width = 300;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Lime;
+            this.button1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(780, 479);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(173, 77);
+            this.button1.TabIndex = 59;
+            this.button1.Text = "EDITAR UM YOUTUBER";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Lime;
+            this.button2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(592, 479);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(173, 77);
+            this.button2.TabIndex = 60;
+            this.button2.Text = "EXCLUIR UM YOUTUBER";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // ListaCadastrosPessoais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkRed;
             this.ClientSize = new System.Drawing.Size(965, 587);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ListaCadastrosPessoais";
             this.Text = "ListaCadastrosPessoais";
@@ -276,5 +305,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnQuantidadeStricker;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnLink;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDescricao;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

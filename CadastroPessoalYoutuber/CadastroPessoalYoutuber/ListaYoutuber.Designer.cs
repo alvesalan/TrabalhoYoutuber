@@ -53,22 +53,13 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.txtLink = new System.Windows.Forms.TextBox();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.rbSimPossuePatrocinador = new System.Windows.Forms.RadioButton();
             this.txtQuantidadeVideos = new System.Windows.Forms.TextBox();
             this.txtQuantidadeMediaLikes = new System.Windows.Forms.TextBox();
             this.txtQuantidadeVisualizacoes = new System.Windows.Forms.TextBox();
             this.txtQuantidadeInscritos = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.cbPlataformaJogo = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.rbSimCanalMonetizado = new System.Windows.Forms.RadioButton();
-            this.label18 = new System.Windows.Forms.Label();
-            this.rbNaoPossueLive = new System.Windows.Forms.RadioButton();
-            this.rbSimPossueLive = new System.Windows.Forms.RadioButton();
-            this.label17 = new System.Windows.Forms.Label();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -81,11 +72,26 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.rbNaoPossueLive = new System.Windows.Forms.RadioButton();
+            this.rbSimPossueLive = new System.Windows.Forms.RadioButton();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.rbSimCanalMonetizado = new System.Windows.Forms.RadioButton();
+            this.label17 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.rbSimPossuePatrocinador = new System.Windows.Forms.RadioButton();
+            this.label18 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudIdade)).BeginInit();
             this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -359,24 +365,18 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Maroon;
+            this.panel4.Controls.Add(this.panel7);
+            this.panel4.Controls.Add(this.panel6);
+            this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.button1);
             this.panel4.Controls.Add(this.txtLink);
-            this.panel4.Controls.Add(this.radioButton6);
-            this.panel4.Controls.Add(this.rbSimPossuePatrocinador);
             this.panel4.Controls.Add(this.txtQuantidadeVideos);
             this.panel4.Controls.Add(this.txtQuantidadeMediaLikes);
             this.panel4.Controls.Add(this.txtQuantidadeVisualizacoes);
             this.panel4.Controls.Add(this.txtQuantidadeInscritos);
-            this.panel4.Controls.Add(this.label21);
             this.panel4.Controls.Add(this.cbPlataformaJogo);
             this.panel4.Controls.Add(this.label20);
             this.panel4.Controls.Add(this.label19);
-            this.panel4.Controls.Add(this.radioButton3);
-            this.panel4.Controls.Add(this.rbSimCanalMonetizado);
-            this.panel4.Controls.Add(this.label18);
-            this.panel4.Controls.Add(this.rbNaoPossueLive);
-            this.panel4.Controls.Add(this.rbSimPossueLive);
-            this.panel4.Controls.Add(this.label17);
             this.panel4.Controls.Add(this.cbCategoria);
             this.panel4.Controls.Add(this.label16);
             this.panel4.Controls.Add(this.label15);
@@ -414,33 +414,6 @@
             this.txtLink.Size = new System.Drawing.Size(216, 30);
             this.txtLink.TabIndex = 57;
             // 
-            // radioButton6
-            // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.radioButton6.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton6.Location = new System.Drawing.Point(312, 719);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(71, 27);
-            this.radioButton6.TabIndex = 56;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "NÃO";
-            this.radioButton6.UseVisualStyleBackColor = false;
-            // 
-            // rbSimPossuePatrocinador
-            // 
-            this.rbSimPossuePatrocinador.AutoSize = true;
-            this.rbSimPossuePatrocinador.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.rbSimPossuePatrocinador.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbSimPossuePatrocinador.Location = new System.Drawing.Point(224, 719);
-            this.rbSimPossuePatrocinador.Name = "rbSimPossuePatrocinador";
-            this.rbSimPossuePatrocinador.Size = new System.Drawing.Size(66, 27);
-            this.rbSimPossuePatrocinador.TabIndex = 55;
-            this.rbSimPossuePatrocinador.TabStop = true;
-            this.rbSimPossuePatrocinador.Text = "SIM";
-            this.rbSimPossuePatrocinador.UseVisualStyleBackColor = false;
-            this.rbSimPossuePatrocinador.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
-            // 
             // txtQuantidadeVideos
             // 
             this.txtQuantidadeVideos.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -473,16 +446,6 @@
             this.txtQuantidadeInscritos.Size = new System.Drawing.Size(216, 30);
             this.txtQuantidadeInscritos.TabIndex = 50;
             // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(187, 551);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(221, 23);
-            this.label21.TabIndex = 49;
-            this.label21.Text = "CANAL POSSUE LIVES";
-            // 
             // cbPlataformaJogo
             // 
             this.cbPlataformaJogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -494,6 +457,7 @@
             this.cbPlataformaJogo.Name = "cbPlataformaJogo";
             this.cbPlataformaJogo.Size = new System.Drawing.Size(216, 32);
             this.cbPlataformaJogo.TabIndex = 48;
+            this.cbPlataformaJogo.SelectedIndexChanged += new System.EventHandler(this.cbPlataformaJogo_SelectedIndexChanged);
             // 
             // label20
             // 
@@ -514,78 +478,6 @@
             this.label19.Size = new System.Drawing.Size(278, 23);
             this.label19.TabIndex = 46;
             this.label19.Text = "QUANTIDADE DE STRICKER";
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.radioButton3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(312, 650);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(71, 27);
-            this.radioButton3.TabIndex = 45;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "NÃO";
-            this.radioButton3.UseVisualStyleBackColor = false;
-            // 
-            // rbSimCanalMonetizado
-            // 
-            this.rbSimCanalMonetizado.AutoSize = true;
-            this.rbSimCanalMonetizado.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.rbSimCanalMonetizado.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbSimCanalMonetizado.Location = new System.Drawing.Point(228, 650);
-            this.rbSimCanalMonetizado.Name = "rbSimCanalMonetizado";
-            this.rbSimCanalMonetizado.Size = new System.Drawing.Size(66, 27);
-            this.rbSimCanalMonetizado.TabIndex = 44;
-            this.rbSimCanalMonetizado.TabStop = true;
-            this.rbSimCanalMonetizado.Text = "SIM";
-            this.rbSimCanalMonetizado.UseVisualStyleBackColor = false;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(172, 693);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(252, 23);
-            this.label18.TabIndex = 43;
-            this.label18.Text = "POSSUE PATROCINADOR";
-            // 
-            // rbNaoPossueLive
-            // 
-            this.rbNaoPossueLive.AutoSize = true;
-            this.rbNaoPossueLive.BackColor = System.Drawing.Color.White;
-            this.rbNaoPossueLive.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbNaoPossueLive.Location = new System.Drawing.Point(312, 577);
-            this.rbNaoPossueLive.Name = "rbNaoPossueLive";
-            this.rbNaoPossueLive.Size = new System.Drawing.Size(71, 27);
-            this.rbNaoPossueLive.TabIndex = 42;
-            this.rbNaoPossueLive.TabStop = true;
-            this.rbNaoPossueLive.Text = "NÃO";
-            this.rbNaoPossueLive.UseVisualStyleBackColor = false;
-            // 
-            // rbSimPossueLive
-            // 
-            this.rbSimPossueLive.AutoSize = true;
-            this.rbSimPossueLive.BackColor = System.Drawing.Color.White;
-            this.rbSimPossueLive.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbSimPossueLive.Location = new System.Drawing.Point(228, 577);
-            this.rbSimPossueLive.Name = "rbSimPossueLive";
-            this.rbSimPossueLive.Size = new System.Drawing.Size(66, 27);
-            this.rbSimPossueLive.TabIndex = 41;
-            this.rbSimPossueLive.TabStop = true;
-            this.rbSimPossueLive.Text = "SIM";
-            this.rbSimPossueLive.UseVisualStyleBackColor = false;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(187, 624);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(233, 23);
-            this.label17.TabIndex = 40;
-            this.label17.Text = "CANAL E MONETIZADO";
             // 
             // cbCategoria
             // 
@@ -720,6 +612,144 @@
             this.label9.TabIndex = 28;
             this.label9.Text = "QUANTIDADES DE VISUALIZAÇÕES";
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label21);
+            this.panel5.Controls.Add(this.rbNaoPossueLive);
+            this.panel5.Controls.Add(this.rbSimPossueLive);
+            this.panel5.Location = new System.Drawing.Point(158, 534);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(286, 87);
+            this.panel5.TabIndex = 59;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(33, 17);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(221, 23);
+            this.label21.TabIndex = 52;
+            this.label21.Text = "CANAL POSSUE LIVES";
+            // 
+            // rbNaoPossueLive
+            // 
+            this.rbNaoPossueLive.AutoSize = true;
+            this.rbNaoPossueLive.BackColor = System.Drawing.Color.White;
+            this.rbNaoPossueLive.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbNaoPossueLive.Location = new System.Drawing.Point(158, 43);
+            this.rbNaoPossueLive.Name = "rbNaoPossueLive";
+            this.rbNaoPossueLive.Size = new System.Drawing.Size(71, 27);
+            this.rbNaoPossueLive.TabIndex = 51;
+            this.rbNaoPossueLive.TabStop = true;
+            this.rbNaoPossueLive.Text = "NÃO";
+            this.rbNaoPossueLive.UseVisualStyleBackColor = false;
+            // 
+            // rbSimPossueLive
+            // 
+            this.rbSimPossueLive.AutoSize = true;
+            this.rbSimPossueLive.BackColor = System.Drawing.Color.White;
+            this.rbSimPossueLive.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSimPossueLive.Location = new System.Drawing.Point(74, 43);
+            this.rbSimPossueLive.Name = "rbSimPossueLive";
+            this.rbSimPossueLive.Size = new System.Drawing.Size(66, 27);
+            this.rbSimPossueLive.TabIndex = 50;
+            this.rbSimPossueLive.TabStop = true;
+            this.rbSimPossueLive.Text = "SIM";
+            this.rbSimPossueLive.UseVisualStyleBackColor = false;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.radioButton3);
+            this.panel6.Controls.Add(this.label17);
+            this.panel6.Controls.Add(this.rbSimCanalMonetizado);
+            this.panel6.Location = new System.Drawing.Point(158, 619);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(286, 71);
+            this.panel6.TabIndex = 60;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.radioButton3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton3.Location = new System.Drawing.Point(156, 31);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(71, 27);
+            this.radioButton3.TabIndex = 63;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "NÃO";
+            this.radioButton3.UseVisualStyleBackColor = false;
+            // 
+            // rbSimCanalMonetizado
+            // 
+            this.rbSimCanalMonetizado.AutoSize = true;
+            this.rbSimCanalMonetizado.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.rbSimCanalMonetizado.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSimCanalMonetizado.Location = new System.Drawing.Point(72, 31);
+            this.rbSimCanalMonetizado.Name = "rbSimCanalMonetizado";
+            this.rbSimCanalMonetizado.Size = new System.Drawing.Size(66, 27);
+            this.rbSimCanalMonetizado.TabIndex = 62;
+            this.rbSimCanalMonetizado.TabStop = true;
+            this.rbSimCanalMonetizado.Text = "SIM";
+            this.rbSimCanalMonetizado.UseVisualStyleBackColor = false;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(31, 5);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(233, 23);
+            this.label17.TabIndex = 61;
+            this.label17.Text = "CANAL E MONETIZADO";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.radioButton6);
+            this.panel7.Controls.Add(this.rbSimPossuePatrocinador);
+            this.panel7.Controls.Add(this.label18);
+            this.panel7.Location = new System.Drawing.Point(158, 685);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(286, 89);
+            this.panel7.TabIndex = 61;
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.radioButton6.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton6.Location = new System.Drawing.Point(157, 44);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(71, 27);
+            this.radioButton6.TabIndex = 59;
+            this.radioButton6.TabStop = true;
+            this.radioButton6.Text = "NÃO";
+            this.radioButton6.UseVisualStyleBackColor = false;
+            // 
+            // rbSimPossuePatrocinador
+            // 
+            this.rbSimPossuePatrocinador.AutoSize = true;
+            this.rbSimPossuePatrocinador.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.rbSimPossuePatrocinador.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSimPossuePatrocinador.Location = new System.Drawing.Point(69, 44);
+            this.rbSimPossuePatrocinador.Name = "rbSimPossuePatrocinador";
+            this.rbSimPossuePatrocinador.Size = new System.Drawing.Size(66, 27);
+            this.rbSimPossuePatrocinador.TabIndex = 58;
+            this.rbSimPossuePatrocinador.TabStop = true;
+            this.rbSimPossuePatrocinador.Text = "SIM";
+            this.rbSimPossuePatrocinador.UseVisualStyleBackColor = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(17, 18);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(252, 23);
+            this.label18.TabIndex = 57;
+            this.label18.Text = "POSSUE PATROCINADOR";
+            // 
             // ListaYoutuber
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -745,6 +775,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudIdade)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -779,16 +815,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.ComboBox cbPlataformaJogo;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton rbSimCanalMonetizado;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.RadioButton rbNaoPossueLive;
-        private System.Windows.Forms.RadioButton rbSimPossueLive;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox cbCategoria;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
@@ -797,13 +826,23 @@
         private System.Windows.Forms.NumericUpDown nudIdade;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox txtLink;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton rbSimPossuePatrocinador;
         private System.Windows.Forms.TextBox txtQuantidadeVideos;
         private System.Windows.Forms.TextBox txtQuantidadeMediaLikes;
         private System.Windows.Forms.TextBox txtQuantidadeVisualizacoes;
         private System.Windows.Forms.TextBox txtQuantidadeInscritos;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.RadioButton rbNaoPossueLive;
+        private System.Windows.Forms.RadioButton rbSimPossueLive;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton rbSimPossuePatrocinador;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.RadioButton rbSimCanalMonetizado;
     }
 }
 
