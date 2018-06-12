@@ -33,8 +33,10 @@
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -48,8 +50,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -111,17 +111,27 @@
             this.panel1.Size = new System.Drawing.Size(275, 346);
             this.panel1.TabIndex = 18;
             // 
-            // button2
+            // label10
             // 
-            this.button2.BackColor = System.Drawing.Color.Lime;
-            this.button2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(27, 263);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 41);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "LOGIN";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Lime;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(13, 34);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(242, 23);
+            this.label10.TabIndex = 24;
+            this.label10.Text = " EDIATR INFORMAÇÕES";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Lime;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(60, 11);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(134, 23);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "LOGUE PARA\r\n";
             // 
             // button3
             // 
@@ -133,6 +143,18 @@
             this.button3.TabIndex = 19;
             this.button3.Text = "LIMPAR";
             this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Lime;
+            this.button2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(27, 263);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(103, 41);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "LOGIN";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel2
             // 
@@ -226,6 +248,7 @@
             this.button6.TabIndex = 25;
             this.button6.Text = "LISTA DE TODAS AS INFORMAÇOES DOS YOUTUBERS";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -281,28 +304,6 @@
             this.label3.Size = new System.Drawing.Size(474, 39);
             this.label3.TabIndex = 20;
             this.label3.Text = "SEJA BEM VINDO AO MAIOR";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Lime;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(60, 11);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(134, 23);
-            this.label9.TabIndex = 23;
-            this.label9.Text = "LOGUE PARA\r\n";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Lime;
-            this.label10.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(13, 34);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(242, 23);
-            this.label10.TabIndex = 24;
-            this.label10.Text = " EDIATR INFORMAÇÕES";
             // 
             // Principal
             // 

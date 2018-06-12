@@ -50,7 +50,16 @@ namespace CadastroPessoalYoutuber
             this.Login = login;
         }
         public void SetSenha(string senha)
-        {            
+        {
+            if (senha.Count() < 8)
+            {
+                throw new Exception("Senha deve possuir mais de 8 caracter !!");
+            }
+            if (senha.Count()> 30)
+            {
+                throw new Exception("Senha dev possuir no maximo 30 caracter !!");
+            }
+            
             this.Senha = senha;
             senha = A;
         }
@@ -141,6 +150,7 @@ namespace CadastroPessoalYoutuber
 
         public string GetLogin() { return Login; }
         public string GetSenha() { return Senha; }
+        public string GetSenha2() { return Senha2; }
         public string GetNome() { return Nome; }
         public string GetSobrenome() { return Sobrenome; }
         public string GetNickName() { return NickName; }
@@ -150,7 +160,7 @@ namespace CadastroPessoalYoutuber
         public string GetNomeDoCanal() {return NomeDoCanal ;}
         public string GetCategoria() { return Categoria;}
         public string GetPlataformaJogo() {return PlataformaJogo ;}
-        public int GetQuantidadesDeInscritos() {return QuantidadesDeInscritos ;}
+        public int GetQuantidadesDeInscritos() {return QuantidadesDeInscritos; }
         public int GetQuantidadeDeVisualizacoes() {return QuantidadeDeVisualizacoes ;}
         public int GetQuantidadeMediaDeLikesPorVideo() {return QuantidadeMediaDeLikesPorVideo ;}
         public int GetQuantidadeVideos() {return QuantidadeVideos ;}

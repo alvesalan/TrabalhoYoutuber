@@ -29,10 +29,28 @@ namespace CadastroPessoalYoutuber
             {
                 dataGridView1.Rows.Add(new Object[]{
 
+                cadastropessoal.GetLogin(),
+                cadastropessoal.GetSenha(),
                 cadastropessoal.GetNome(),
                 cadastropessoal.GetSobrenome(),
                 cadastropessoal.GetNickName(),
-
+                cadastropessoal.GetNacionalidade(),
+                cadastropessoal.GetIdade(),
+                cadastropessoal.GetRendaMensal(),
+                cadastropessoal.GetNomeDoCanal(),
+                cadastropessoal.GetCategoria(),
+                cadastropessoal.GetPlataformaJogo(),
+                cadastropessoal.GetQuantidadesDeInscritos(),
+                cadastropessoal.GetQuantidadeDeVisualizacoes(),
+                cadastropessoal.GetQuantidadeMediaDeLikesPorVideo(),
+                cadastropessoal.GetQuantidadeVideos(),
+                cadastropessoal.GetPossueLive(),
+                cadastropessoal.GetCanalMonetizado(),
+                cadastropessoal.GetPossuePatrocinador(),
+                cadastropessoal.GetQuantidadeStricker(),
+                cadastropessoal.GetLink(),
+                cadastropessoal.GetDescricao()
+                                
                 });
             }
         }

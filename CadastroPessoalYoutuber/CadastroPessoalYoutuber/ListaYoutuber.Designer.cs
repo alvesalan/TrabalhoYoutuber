@@ -38,6 +38,10 @@
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtRenda = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.nudIdade = new System.Windows.Forms.NumericUpDown();
+            this.label22 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.cbNacionalidade = new System.Windows.Forms.ComboBox();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -47,6 +51,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txtLink = new System.Windows.Forms.TextBox();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.rbSimPossuePatrocinador = new System.Windows.Forms.RadioButton();
+            this.txtQuantidadeVideos = new System.Windows.Forms.TextBox();
+            this.txtQuantidadeMediaLikes = new System.Windows.Forms.TextBox();
+            this.txtQuantidadeVisualizacoes = new System.Windows.Forms.TextBox();
+            this.txtQuantidadeInscritos = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.cbPlataformaJogo = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -54,7 +66,7 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.rbSimCanalMonetizado = new System.Windows.Forms.RadioButton();
             this.label18 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rbNaoPossueLive = new System.Windows.Forms.RadioButton();
             this.rbSimPossueLive = new System.Windows.Forms.RadioButton();
             this.label17 = new System.Windows.Forms.Label();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
@@ -69,23 +81,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.nudIdade = new System.Windows.Forms.NumericUpDown();
-            this.txtQuantidadeInscritos = new System.Windows.Forms.TextBox();
-            this.txtQuantidadeVisualizacoes = new System.Windows.Forms.TextBox();
-            this.txtQuantidadeMediaLikes = new System.Windows.Forms.TextBox();
-            this.txtQuantidadeVideos = new System.Windows.Forms.TextBox();
-            this.rbSimPossuePatrocinador = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.txtRenda = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtLink = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudIdade)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -196,6 +196,43 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(571, 510);
             this.panel3.TabIndex = 15;
+            // 
+            // txtRenda
+            // 
+            this.txtRenda.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRenda.Location = new System.Drawing.Point(185, 452);
+            this.txtRenda.Name = "txtRenda";
+            this.txtRenda.Size = new System.Drawing.Size(216, 30);
+            this.txtRenda.TabIndex = 36;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(170, 426);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(258, 23);
+            this.label12.TabIndex = 35;
+            this.label12.Text = "RENDA MENSAL POR MES";
+            // 
+            // nudIdade
+            // 
+            this.nudIdade.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudIdade.Location = new System.Drawing.Point(185, 375);
+            this.nudIdade.Name = "nudIdade";
+            this.nudIdade.Size = new System.Drawing.Size(216, 29);
+            this.nudIdade.TabIndex = 33;
+            this.nudIdade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(267, 340);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(72, 23);
+            this.label22.TabIndex = 32;
+            this.label22.Text = "IDADE";
             // 
             // label14
             // 
@@ -337,7 +374,7 @@
             this.panel4.Controls.Add(this.radioButton3);
             this.panel4.Controls.Add(this.rbSimCanalMonetizado);
             this.panel4.Controls.Add(this.label18);
-            this.panel4.Controls.Add(this.radioButton2);
+            this.panel4.Controls.Add(this.rbNaoPossueLive);
             this.panel4.Controls.Add(this.rbSimPossueLive);
             this.panel4.Controls.Add(this.label17);
             this.panel4.Controls.Add(this.cbCategoria);
@@ -356,6 +393,85 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(571, 1511);
             this.panel4.TabIndex = 16;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Lime;
+            this.button1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(193, 1087);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(173, 64);
+            this.button1.TabIndex = 58;
+            this.button1.Text = "SALVAR";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txtLink
+            // 
+            this.txtLink.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLink.Location = new System.Drawing.Point(187, 884);
+            this.txtLink.Name = "txtLink";
+            this.txtLink.Size = new System.Drawing.Size(216, 30);
+            this.txtLink.TabIndex = 57;
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.radioButton6.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton6.Location = new System.Drawing.Point(312, 719);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(71, 27);
+            this.radioButton6.TabIndex = 56;
+            this.radioButton6.TabStop = true;
+            this.radioButton6.Text = "NÃO";
+            this.radioButton6.UseVisualStyleBackColor = false;
+            // 
+            // rbSimPossuePatrocinador
+            // 
+            this.rbSimPossuePatrocinador.AutoSize = true;
+            this.rbSimPossuePatrocinador.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.rbSimPossuePatrocinador.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSimPossuePatrocinador.Location = new System.Drawing.Point(224, 719);
+            this.rbSimPossuePatrocinador.Name = "rbSimPossuePatrocinador";
+            this.rbSimPossuePatrocinador.Size = new System.Drawing.Size(66, 27);
+            this.rbSimPossuePatrocinador.TabIndex = 55;
+            this.rbSimPossuePatrocinador.TabStop = true;
+            this.rbSimPossuePatrocinador.Text = "SIM";
+            this.rbSimPossuePatrocinador.UseVisualStyleBackColor = false;
+            this.rbSimPossuePatrocinador.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
+            // 
+            // txtQuantidadeVideos
+            // 
+            this.txtQuantidadeVideos.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuantidadeVideos.Location = new System.Drawing.Point(185, 498);
+            this.txtQuantidadeVideos.Name = "txtQuantidadeVideos";
+            this.txtQuantidadeVideos.Size = new System.Drawing.Size(216, 30);
+            this.txtQuantidadeVideos.TabIndex = 54;
+            // 
+            // txtQuantidadeMediaLikes
+            // 
+            this.txtQuantidadeMediaLikes.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuantidadeMediaLikes.Location = new System.Drawing.Point(185, 421);
+            this.txtQuantidadeMediaLikes.Name = "txtQuantidadeMediaLikes";
+            this.txtQuantidadeMediaLikes.Size = new System.Drawing.Size(216, 30);
+            this.txtQuantidadeMediaLikes.TabIndex = 53;
+            // 
+            // txtQuantidadeVisualizacoes
+            // 
+            this.txtQuantidadeVisualizacoes.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuantidadeVisualizacoes.Location = new System.Drawing.Point(187, 349);
+            this.txtQuantidadeVisualizacoes.Name = "txtQuantidadeVisualizacoes";
+            this.txtQuantidadeVisualizacoes.Size = new System.Drawing.Size(216, 30);
+            this.txtQuantidadeVisualizacoes.TabIndex = 51;
+            // 
+            // txtQuantidadeInscritos
+            // 
+            this.txtQuantidadeInscritos.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuantidadeInscritos.Location = new System.Drawing.Point(187, 268);
+            this.txtQuantidadeInscritos.Name = "txtQuantidadeInscritos";
+            this.txtQuantidadeInscritos.Size = new System.Drawing.Size(216, 30);
+            this.txtQuantidadeInscritos.TabIndex = 50;
             // 
             // label21
             // 
@@ -435,18 +551,18 @@
             this.label18.TabIndex = 43;
             this.label18.Text = "POSSUE PATROCINADOR";
             // 
-            // radioButton2
+            // rbNaoPossueLive
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.BackColor = System.Drawing.Color.White;
-            this.radioButton2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(312, 577);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(71, 27);
-            this.radioButton2.TabIndex = 42;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "NÃO";
-            this.radioButton2.UseVisualStyleBackColor = false;
+            this.rbNaoPossueLive.AutoSize = true;
+            this.rbNaoPossueLive.BackColor = System.Drawing.Color.White;
+            this.rbNaoPossueLive.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbNaoPossueLive.Location = new System.Drawing.Point(312, 577);
+            this.rbNaoPossueLive.Name = "rbNaoPossueLive";
+            this.rbNaoPossueLive.Size = new System.Drawing.Size(71, 27);
+            this.rbNaoPossueLive.TabIndex = 42;
+            this.rbNaoPossueLive.TabStop = true;
+            this.rbNaoPossueLive.Text = "NÃO";
+            this.rbNaoPossueLive.UseVisualStyleBackColor = false;
             // 
             // rbSimPossueLive
             // 
@@ -604,122 +720,6 @@
             this.label9.TabIndex = 28;
             this.label9.Text = "QUANTIDADES DE VISUALIZAÇÕES";
             // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(267, 340);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(72, 23);
-            this.label22.TabIndex = 32;
-            this.label22.Text = "IDADE";
-            // 
-            // nudIdade
-            // 
-            this.nudIdade.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudIdade.Location = new System.Drawing.Point(185, 375);
-            this.nudIdade.Name = "nudIdade";
-            this.nudIdade.Size = new System.Drawing.Size(216, 29);
-            this.nudIdade.TabIndex = 33;
-            this.nudIdade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtQuantidadeInscritos
-            // 
-            this.txtQuantidadeInscritos.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuantidadeInscritos.Location = new System.Drawing.Point(187, 268);
-            this.txtQuantidadeInscritos.Name = "txtQuantidadeInscritos";
-            this.txtQuantidadeInscritos.Size = new System.Drawing.Size(216, 30);
-            this.txtQuantidadeInscritos.TabIndex = 50;
-            // 
-            // txtQuantidadeVisualizacoes
-            // 
-            this.txtQuantidadeVisualizacoes.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuantidadeVisualizacoes.Location = new System.Drawing.Point(187, 349);
-            this.txtQuantidadeVisualizacoes.Name = "txtQuantidadeVisualizacoes";
-            this.txtQuantidadeVisualizacoes.Size = new System.Drawing.Size(216, 30);
-            this.txtQuantidadeVisualizacoes.TabIndex = 51;
-            // 
-            // txtQuantidadeMediaLikes
-            // 
-            this.txtQuantidadeMediaLikes.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuantidadeMediaLikes.Location = new System.Drawing.Point(185, 421);
-            this.txtQuantidadeMediaLikes.Name = "txtQuantidadeMediaLikes";
-            this.txtQuantidadeMediaLikes.Size = new System.Drawing.Size(216, 30);
-            this.txtQuantidadeMediaLikes.TabIndex = 53;
-            // 
-            // txtQuantidadeVideos
-            // 
-            this.txtQuantidadeVideos.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuantidadeVideos.Location = new System.Drawing.Point(185, 498);
-            this.txtQuantidadeVideos.Name = "txtQuantidadeVideos";
-            this.txtQuantidadeVideos.Size = new System.Drawing.Size(216, 30);
-            this.txtQuantidadeVideos.TabIndex = 54;
-            // 
-            // rbSimPossuePatrocinador
-            // 
-            this.rbSimPossuePatrocinador.AutoSize = true;
-            this.rbSimPossuePatrocinador.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.rbSimPossuePatrocinador.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbSimPossuePatrocinador.Location = new System.Drawing.Point(224, 719);
-            this.rbSimPossuePatrocinador.Name = "rbSimPossuePatrocinador";
-            this.rbSimPossuePatrocinador.Size = new System.Drawing.Size(66, 27);
-            this.rbSimPossuePatrocinador.TabIndex = 55;
-            this.rbSimPossuePatrocinador.TabStop = true;
-            this.rbSimPossuePatrocinador.Text = "SIM";
-            this.rbSimPossuePatrocinador.UseVisualStyleBackColor = false;
-            this.rbSimPossuePatrocinador.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
-            // 
-            // radioButton6
-            // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.radioButton6.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton6.Location = new System.Drawing.Point(312, 719);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(71, 27);
-            this.radioButton6.TabIndex = 56;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "NÃO";
-            this.radioButton6.UseVisualStyleBackColor = false;
-            // 
-            // txtRenda
-            // 
-            this.txtRenda.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRenda.Location = new System.Drawing.Point(185, 452);
-            this.txtRenda.Name = "txtRenda";
-            this.txtRenda.Size = new System.Drawing.Size(216, 30);
-            this.txtRenda.TabIndex = 36;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(170, 426);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(258, 23);
-            this.label12.TabIndex = 35;
-            this.label12.Text = "RENDA MENSAL POR MES";
-            // 
-            // txtLink
-            // 
-            this.txtLink.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLink.Location = new System.Drawing.Point(187, 884);
-            this.txtLink.Name = "txtLink";
-            this.txtLink.Size = new System.Drawing.Size(216, 30);
-            this.txtLink.TabIndex = 57;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Lime;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(193, 1087);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(173, 64);
-            this.button1.TabIndex = 58;
-            this.button1.Text = "SALVAR";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // ListaYoutuber
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -727,7 +727,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.DarkRed;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(818, 881);
+            this.ClientSize = new System.Drawing.Size(818, 873);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -742,9 +742,9 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIdade)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudIdade)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -786,7 +786,7 @@
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton rbSimCanalMonetizado;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rbNaoPossueLive;
         private System.Windows.Forms.RadioButton rbSimPossueLive;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox cbCategoria;

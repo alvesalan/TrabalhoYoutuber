@@ -35,9 +35,9 @@ namespace CadastroPessoalYoutuber
             string NomeDoCanal = cadastropessoal.GetNomeDoCanal();
             string Categoria = cadastropessoal.GetCategoria();
             string PlataformaJogo = cadastropessoal.GetPlataformaJogo();
-            int QuantidadesDeInscritos = cadastropessoal.GetQuantidadeDeIncritos();
+            int QuantidadesDeInscritos = cadastropessoal.GetQuantidadesDeInscritos();
             int QuantidadeDeVisualizacoes = cadastropessoal.GetQuantidadeDeVisualizacoes();
-            int QuantidadeMediaDeLikesPorVideo = cadastropessoal.GetQuantidadeMediaDeLikesPorVideo;
+            int QuantidadeMediaDeLikesPorVideo = cadastropessoal.GetQuantidadeMediaDeLikesPorVideo();
             int QuantidadeVideos = cadastropessoal.GetQuantidadeVideos();
             bool PossueLive = cadastropessoal.GetPossueLive();
             bool CanalMonetizado = cadastropessoal.GetCanalMonetizado();
@@ -79,6 +79,7 @@ namespace CadastroPessoalYoutuber
             if (txtSenha2.Text != txtSenha.Text)
             {
                 MessageBox.Show("Senhas não se coicidem !!");
+                txtSenha.Focus();
                 return;
             }
 
@@ -88,28 +89,28 @@ namespace CadastroPessoalYoutuber
             try
             {
 
-                cadastropessoal.SetLogin();
-                cadastropessoal.SetSenha();
-                cadastropessoal.SetSenha2();
-                cadastropessoal.SetNome();
-                cadastropessoal.SetSobrenome();
-                cadastropessoal.SetNickName();
-                cadastropessoal.SetNacionalidade();
-                cadastropessoal.SetIdade();
-                cadastropessoal.SetRendaMensal();
-                cadastropessoal.SetNomeDoCanal();
-                cadastropessoal.SetCategoria();
-                cadastropessoal.SetPlataformaJogo();
-                cadastropessoal.SetQuantidadeDeIncritos();
-                cadastropessoal.SetQuantidadeDeVisualizacoes();
-                cadastropessoal.SetQuantidadeMediaDeLikesPorVideo();
-                cadastropessoal.SetQuantidadeVideos();
-                cadastropessoal.SetPossueLive();
-                cadastropessoal.SetCanalMonetizado();
-                cadastropessoal.SetPossuePatrocinador();
-                cadastropessoal.SetQuantidadeStricker();
-                cadastropessoal.SetLink();
-                cadastropessoal.SetDescricao();
+                cadastropessoal.SetLogin(txtLogin.Text);
+                cadastropessoal.SetSenha(txtSenha.Text);
+                cadastropessoal.SetSenha2(txtSenha2.Text);
+                cadastropessoal.SetNome(txtNome.Text);
+                cadastropessoal.SetSobrenome(txtSobrenome.Text);
+                cadastropessoal.SetNickName(txtNickName.Text);
+                cadastropessoal.SetNacionalidade(cbNacionalidade.SelectedItem.ToString());
+              //  cadastropessoal.SetIdade(nudIdade.Value.ToString());
+                cadastropessoal.SetRendaMensal(Convert.ToDouble(txtRenda.Text));
+                cadastropessoal.SetNomeDoCanal(txtNomeCanal.Text);
+                cadastropessoal.SetCategoria(cbCategoria.SelectedItem.ToString());
+                cadastropessoal.SetPlataformaJogo(cbPlataformaJogo.SelectedItem.ToString());
+                cadastropessoal.SetQuantidadeDeInscritos(Convert.ToInt32(txtQuantidadeInscritos.Text));
+                cadastropessoal.SetQuantidadeDeVisualizacoes(Convert.ToInt32(txtQuantidadeVisualizacoes.Text));
+                cadastropessoal.SetQuantidadeMediaDeLikesPorVideo(Convert.ToInt32(txtQuantidadeMediaLikes.Text));
+                cadastropessoal.SetQuantidadeVideos(Convert.ToInt32(txtQuantidadeVideos.Text));
+               // cadastropessoal.SetPossueLive(rbSimPossueLive);
+               // cadastropessoal.SetCanalMonetizado(rbSimCanalMonetizado);
+               // cadastropessoal.SetPossuePatrocinador(rbSimPossuePatrocinador);
+                  cadastropessoal.SetQuantidadeStricker(Convert.ToInt32(txtQuantidadeDeStrinker.Text));
+                cadastropessoal.SetLink(txtLink.Text);
+                cadastropessoal.SetDescricao(txtDescricao.Text);
             }
             catch (Exception ex)
             {
