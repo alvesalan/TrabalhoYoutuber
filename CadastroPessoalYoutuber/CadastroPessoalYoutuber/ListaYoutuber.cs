@@ -35,10 +35,10 @@ namespace CadastroPessoalYoutuber
             string NomeDoCanal = cadastropessoal.GetNomeDoCanal();
             string Categoria = cadastropessoal.GetCategoria();
             string PlataformaJogo = cadastropessoal.GetPlataformaJogo();
-            int QuantidadesDeInscritos = cadastropessoal.GetQuantidadesDeInscritos();
-            int QuantidadeDeVisualizacoes = cadastropessoal.GetQuantidadeDeVisualizacoes();
-            int QuantidadeMediaDeLikesPorVideo = cadastropessoal.GetQuantidadeMediaDeLikesPorVideo();
-            int QuantidadeVideos = cadastropessoal.GetQuantidadeVideos();
+            long QuantidadesDeInscritos = cadastropessoal.GetQuantidadesDeInscritos();
+            long QuantidadeDeVisualizacoes = cadastropessoal.GetQuantidadeDeVisualizacoes();
+            long QuantidadeMediaDeLikesPorVideo = cadastropessoal.GetQuantidadeMediaDeLikesPorVideo();
+            long QuantidadeVideos = cadastropessoal.GetQuantidadeVideos();
             string PossueLive = cadastropessoal.GetPossueLive();
             string CanalMonetizado = cadastropessoal.GetCanalMonetizado();
             string PossuePatrocinador = cadastropessoal.GetPossuePatrocinador();
@@ -178,6 +178,11 @@ namespace CadastroPessoalYoutuber
         private void cbPlataformaJogo_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Dispose();
         }
 
        
