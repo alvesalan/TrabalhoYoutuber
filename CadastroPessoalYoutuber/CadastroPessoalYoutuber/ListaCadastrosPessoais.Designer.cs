@@ -292,6 +292,7 @@
             this.Name = "ListaCadastrosPessoais";
             this.Text = "ListaCadastrosPessoais";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Activated += new System.EventHandler(this.ListaCadastrosPessoais_Activated);
             this.Load += new System.EventHandler(this.ListaCadastrosPessoais_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -98,9 +98,9 @@ namespace CadastroPessoalYoutuber
             Dispose();
         }
 
-        
-
-            
-        
+        private void ListaCadastrosPessoais_Activated(object sender, EventArgs e)
+        {
+            AtualizarListaYoutubers();
+        }
     }
 }

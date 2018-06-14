@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CadastroPessoalRepositorio.cs" />
+    <Compile Include="Lista2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lista2.Designer.cs">
+      <DependentUpon>Lista2.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListaCadastrosPessoais.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Lista2.resx">
+      <DependentUpon>Lista2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListaCadastrosPessoais.resx">
       <DependentUpon>ListaCadastrosPessoais.cs</DependentUpon>
     </EmbeddedResource>
