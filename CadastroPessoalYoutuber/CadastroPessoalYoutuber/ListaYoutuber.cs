@@ -10,181 +10,135 @@ using System.Windows.Forms;
 
 namespace CadastroPessoalYoutuber
 {
+    [Serializable]
     public partial class ListaYoutuber : Form
     {
-        int posicao = -1;
-        public static string NOME_ARQUIVO = "Personagens.bin";
+       
+        
+
         public ListaYoutuber()
         {
             InitializeComponent();
         }
 
-     
-        private void AtualizarListaYoutuber()
+       
+
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            CadastroPessoal cadastropessoal = new CadastroPessoal();
-            string Login = cadastropessoal.GetLogin();
-            string Senha = cadastropessoal.GetSenha();
-            string Senha2 = cadastropessoal.GetSenha2();
-            string Name = cadastropessoal.GetNome();
-            string Sobrenome = cadastropessoal.GetSobrenome();
-            string NickName = cadastropessoal.GetNickName();
-            string Nacionalidade = cadastropessoal.GetNacionalidade();
-            int Idade = cadastropessoal.GetIdade();
-            double RendaMensal = cadastropessoal.GetRendaMensal();
-            string NomeDoCanal = cadastropessoal.GetNomeDoCanal();
-            string Categoria = cadastropessoal.GetCategoria();
-            string PlataformaJogo = cadastropessoal.GetPlataformaJogo();
-            long QuantidadesDeInscritos = cadastropessoal.GetQuantidadesDeInscritos();
-            long QuantidadeDeVisualizacoes = cadastropessoal.GetQuantidadeDeVisualizacoes();
-            long QuantidadeMediaDeLikesPorVideo = cadastropessoal.GetQuantidadeMediaDeLikesPorVideo();
-            long QuantidadeVideos = cadastropessoal.GetQuantidadeVideos();
-            string PossueLive = cadastropessoal.GetPossueLive();
-            string CanalMonetizado = cadastropessoal.GetCanalMonetizado();
-            string PossuePatrocinador = cadastropessoal.GetPossuePatrocinador();
-            int QuantidadeStricker = cadastropessoal.GetQuantidadeStricker();
-            string Link = cadastropessoal.GetLink();
-            string Descricao = cadastropessoal.GetDescricao();
+
+        }
+
+        private void ListaCadastrosPessoais_Load(object sender, EventArgs e)
+        {
            
         }
-        private void txtNome_TextChanged(object sender, EventArgs e)
+
+        private void AtualizarListaYoutubers()
         {
+            CadastroPessoalRepositorio tudo = new CadastroPessoalRepositorio();
+            dataGridView1.Rows.Clear();
+            foreach (CadastroPessoal cadastropessoal in tudo.ObterPersonagens())
+            {
+                dataGridView1.Rows.Add(new Object[]{
 
-        }
-
-        private void txtNickName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ListaYoutuber_Load(object sender, EventArgs e)
-        {
-
+                cadastropessoal.GetCodigo(),
+                cadastropessoal.GetLogin(),
+                cadastropessoal.GetSenha(),
+                cadastropessoal.GetNome(),
+                cadastropessoal.GetSobrenome(),
+                cadastropessoal.GetNickName(),
+                cadastropessoal.GetNacionalidade(),
+                cadastropessoal.GetIdade(),
+                cadastropessoal.GetRendaMensal(),
+                cadastropessoal.GetNomeDoCanal(),
+                cadastropessoal.GetCategoria(),
+                cadastropessoal.GetQuantidadesDeInscritos(),
+                cadastropessoal.GetQuantidadeDeVisualizacoes(),
+                cadastropessoal.GetQuantidadeMediaDeLikesPorVideo(),
+                cadastropessoal.GetQuantidadeVideos(),
+                cadastropessoal.GetPossueLive(),
+                cadastropessoal.GetCanalMonetizado(),
+                cadastropessoal.GetPossuePatrocinador(),
+                cadastropessoal.GetQuantidadeStricker(),
+                cadastropessoal.GetLink(),
+                cadastropessoal.GetDescricao()
+                                
+                });
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            new ListaCadastrosPessoais().ShowDialog();
+
+            ApagarYoutuber();
         }
 
-        private void txtLogin_TextChanged(object sender, EventArgs e)
+        private void ApagarYoutuber()
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        
-            if (txtSenha2.Text != txtSenha.Text)
+            if (dataGridView1.CurrentRow == null)
             {
-                MessageBox.Show("Senhas não se coicidem !!");
-                txtSenha.Focus();
+                MessageBox.Show("Selecione algo nesta lista");
                 return;
             }
 
-
-            CadastroPessoal cadastropessoal = new CadastroPessoal();
-
-
-            string SimCanalMonetizado;
-            string SimPossueLive;
-            string SimPossuePatrocinador;
-            try
-            {
-                if (rbSimCanalMonetizado.Checked == true)
-	            {
-                     SimCanalMonetizado = "Sim";
-	            }
-                else
-                {
-                     SimCanalMonetizado = "Não";
-                }
-
-                if (rbNaoPossueLive.Checked == true)
-                {
-                    SimPossueLive = "Sim";
-                }
-                else
-                {
-                    SimPossueLive = "Não";
-                }
-
-                if (rbSimPossuePatrocinador.Checked == true)
-                {
-                    SimPossuePatrocinador = "Sim";
-                }
-                else
-                {
-                    SimPossuePatrocinador = "Não";
-                }
-                cadastropessoal.SetLogin(txtLogin.Text);
-                cadastropessoal.SetSenha(txtSenha.Text);
-                cadastropessoal.SetSenha2(txtSenha2.Text);
-                cadastropessoal.SetNome(txtNome.Text);
-                cadastropessoal.SetSobrenome(txtSobrenome.Text);
-                cadastropessoal.SetNickName(txtNickName.Text);
-                cadastropessoal.SetNacionalidade(cbNacionalidade.SelectedItem.ToString());
-                cadastropessoal.SetIdade(Convert.ToInt32(nudIdade.Value.ToString()));
-                cadastropessoal.SetRendaMensal(Convert.ToDouble(txtRenda.Text));
-                cadastropessoal.SetNomeDoCanal(txtNomeCanal.Text);
-                cadastropessoal.SetCategoria(cbCategoria.SelectedItem.ToString());
-                cadastropessoal.SetPlataformaJogo(cbPlataformaJogo.SelectedItem.ToString());
-                cadastropessoal.SetQuantidadeDeInscritos(Convert.ToInt32(txtQuantidadeInscritos.Text));
-                cadastropessoal.SetQuantidadeDeVisualizacoes(Convert.ToInt32(txtQuantidadeVisualizacoes.Text));
-                cadastropessoal.SetQuantidadeMediaDeLikesPorVideo(Convert.ToInt32(txtQuantidadeMediaLikes.Text));
-                cadastropessoal.SetQuantidadeVideos(Convert.ToInt32(txtQuantidadeVideos.Text));
-                cadastropessoal.SetPossueLive(Convert.ToString(SimPossueLive));
-                cadastropessoal.SetCanalMonetizado(Convert.ToString(SimCanalMonetizado));
-                cadastropessoal.SetPossuePatrocinador(Convert.ToString(SimPossuePatrocinador));
-                  cadastropessoal.SetQuantidadeStricker(Convert.ToInt32(txtQuantidadeDeStrinker.Text));
-                cadastropessoal.SetLink(txtLink.Text);
-                cadastropessoal.SetDescricao(txtDescricao.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return;
-            }
-
-
-            CadastroPessoalRepositorio tudo = new CadastroPessoalRepositorio();
-
-            if (posicao == -1)
-            {
-                tudo.AdicionarCadastroPessoal(cadastropessoal);
-                MessageBox.Show("Personagem cadastarado com sucesso");
-            }
-            else
-            {
-                tudo.EditarCadastroPessoal(cadastropessoal, posicao);
-                MessageBox.Show("Personagem alterado com sucesso !!");
-            }
-
-            AtualizarListaYoutuber();
-        }
-
-        private void txtNickName_TextChanged_1(object sender, EventArgs e)
-        {
+            string nome = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[3].Value.ToString();
+            dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
+            CadastroPessoalRepositorio repository = new CadastroPessoalRepositorio();
+            repository.ApagarCadastroPessoal(nome);
+            MessageBox.Show(nome + " apagado com sucesso");
 
 
         }
 
-        private void radioButton5_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbPlataformaJogo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             Dispose();
         }
 
-       
+        private void ListaCadastrosPessoais_Activated(object sender, EventArgs e)
+        {
+            AtualizarListaYoutubers();
+        }
+
+        private void ListaCadastrosPessoais_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Modifiers == Keys.Control && e.KeyCode == Keys.T)
+            {
+                ApagarYoutuber();
+            }
+            if (e.Modifiers == Keys.Control && e.KeyCode == Keys.E)
+            {
+                EditarPersonagem();
+            }
+
+        }
+
+        private void EditarPersonagem()
+        {
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Selecione um registro para que seja possível editar");
+                return;
+            }
+            int codigo = Convert.ToInt32(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString()); ;
+            new CadastroYoutuber(codigo).ShowDialog();
+        }
+
+        
+            private void button1_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+            private void button3_Click_1(object sender, EventArgs e)
+            {
+                Dispose();
+            }
+
+            private void button1_Click(object sender, EventArgs e)
+            {
+                AtualizarListaYoutubers();
+            }
     }
 }

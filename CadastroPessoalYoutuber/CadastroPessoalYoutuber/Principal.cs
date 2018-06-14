@@ -19,12 +19,12 @@ namespace CadastroPessoalYoutuber
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new ListaYoutuber().ShowDialog();
+            new CadastroYoutuber().ShowDialog();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            new ListaYoutuber().ShowDialog();
+            new CadastroYoutuber().ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -35,12 +35,12 @@ namespace CadastroPessoalYoutuber
 
         private void button6_Click(object sender, EventArgs e)
         {
-            new ListaCadastrosPessoais().ShowDialog();
+            new ListaYoutuber().ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            new Lista2().ShowDialog();
+            
         }
     }
 }

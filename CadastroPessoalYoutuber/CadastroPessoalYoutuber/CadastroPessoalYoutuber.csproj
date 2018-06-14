@@ -47,23 +47,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CadastroPessoalRepositorio.cs" />
-    <Compile Include="Lista2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Lista2.Designer.cs">
-      <DependentUpon>Lista2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ListaCadastrosPessoais.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ListaCadastrosPessoais.Designer.cs">
-      <DependentUpon>ListaCadastrosPessoais.cs</DependentUpon>
-    </Compile>
     <Compile Include="ListaYoutuber.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ListaYoutuber.Designer.cs">
       <DependentUpon>ListaYoutuber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroYoutuber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroYoutuber.Designer.cs">
+      <DependentUpon>CadastroYoutuber.cs</DependentUpon>
     </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
@@ -73,14 +67,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Lista2.resx">
-      <DependentUpon>Lista2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ListaCadastrosPessoais.resx">
-      <DependentUpon>ListaCadastrosPessoais.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ListaYoutuber.resx">
       <DependentUpon>ListaYoutuber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroYoutuber.resx">
+      <DependentUpon>CadastroYoutuber.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

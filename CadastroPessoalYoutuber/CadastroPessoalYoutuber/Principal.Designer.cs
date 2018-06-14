@@ -36,7 +36,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -120,35 +119,22 @@
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel3.BackColor = System.Drawing.Color.Maroon;
             this.panel3.Controls.Add(this.button6);
-            this.panel3.Controls.Add(this.button4);
-            this.panel3.Location = new System.Drawing.Point(81, 476);
+            this.panel3.Location = new System.Drawing.Point(81, 468);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(656, 347);
+            this.panel3.Size = new System.Drawing.Size(656, 355);
             this.panel3.TabIndex = 21;
             // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.Lime;
             this.button6.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(210, 189);
+            this.button6.Location = new System.Drawing.Point(202, 84);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(239, 87);
             this.button6.TabIndex = 25;
             this.button6.Text = "LISTA DE TODAS AS INFORMAÇOES DOS YOUTUBERS";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Lime;
-            this.button4.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(210, 47);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(239, 87);
-            this.button4.TabIndex = 23;
-            this.button4.Text = "LISTA DE YOUTUBER CADASTRDOS";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel4
             // 
@@ -195,6 +181,7 @@
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -213,7 +200,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;

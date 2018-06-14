@@ -12,7 +12,8 @@ namespace CadastroPessoalYoutuber
 
         public string A = "";
 
-
+        private static int UltimoCodigo;
+        private int Codigo;
         private string Login;
         private string Senha;
         private string Senha2;
@@ -24,7 +25,7 @@ namespace CadastroPessoalYoutuber
         private double RendaMensal;
         private string NomeDoCanal;
         private string Categoria;
-        private string PlataformaJogo;
+        //private string PlataformaJogo;
         private long QuantidadesDeInscritos;
         private long QuantidadeDeVisualizacoes;
         private long QuantidadeMediaDeLikesPorVideo;
@@ -37,7 +38,14 @@ namespace CadastroPessoalYoutuber
         private string Descricao;
 
 
-
+        public CadastroPessoal()
+        {
+            Codigo = ++UltimoCodigo; 
+        }
+        public int GetCodigo()
+        {
+            return Codigo;
+        }
         public void SetLogin(string login)
         {
             if (login.Count() < 6)
@@ -110,11 +118,11 @@ namespace CadastroPessoalYoutuber
         {
             if (nickname.Count() < 3)
             {
-                throw new Exception("nickname deve conter no minimo 3 caracter !!");
+                throw new Exception("nickname deve conter no minimo 20 caracter !!");
             }
-            if (nickname.Count() > 30)
+            if (nickname.Count() > 20)
             {
-                throw new Exception("nickname deve conter no maximo 30 caracter !!");
+                throw new Exception("nickname deve conter no maximo 10 caracter !!");
             }      
             this.NickName = nickname;
         }
@@ -166,14 +174,7 @@ namespace CadastroPessoalYoutuber
             this.Categoria = categoria;
         }
 
-        public void SetPlataformaJogo(string plataformajogo)
-        {
-            if (plataformajogo.Count() < 3 )
-            {
-                throw new Exception("Selecione uma plataforma ");
-            }
-            this.PlataformaJogo = plataformajogo;
-        }
+       
         public void SetQuantidadeDeInscritos(int quantidadedeinscritos)
         {
             if (quantidadedeinscritos <= 0)
@@ -270,7 +271,6 @@ namespace CadastroPessoalYoutuber
         public double GetRendaMensal() { return RendaMensal;}
         public string GetNomeDoCanal() {return NomeDoCanal ;}
         public string GetCategoria() { return Categoria;}
-        public string GetPlataformaJogo() {return PlataformaJogo ;}
         public long GetQuantidadesDeInscritos() {return QuantidadesDeInscritos; }
         public long GetQuantidadeDeVisualizacoes() {return QuantidadeDeVisualizacoes ;}
         public long GetQuantidadeMediaDeLikesPorVideo() {return QuantidadeMediaDeLikesPorVideo ;}

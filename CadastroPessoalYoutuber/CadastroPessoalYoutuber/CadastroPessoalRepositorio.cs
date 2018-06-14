@@ -15,10 +15,10 @@ namespace CadastroPessoalYoutuber
 
         public CadastroPessoalRepositorio()
         {
-            if (File.Exists(ListaYoutuber.NOME_ARQUIVO))
+            if (File.Exists(CadastroYoutuber.NOME_ARQUIVO))
             {
                 BinaryFormatter binaryReader = new BinaryFormatter();
-                Stream stream = File.OpenRead(ListaYoutuber.NOME_ARQUIVO);
+                Stream stream = File.OpenRead(CadastroYoutuber.NOME_ARQUIVO);
                 cadastroPessoals = ((CadastroPessoalRepositorio)binaryReader.Deserialize(stream)).ObterPersonagens();
                 stream.Close();
             }
@@ -33,7 +33,7 @@ namespace CadastroPessoalYoutuber
         private void EscreverNoArquivoDosCadastrosPessoals()
         {
             BinaryFormatter binaryWritter = new BinaryFormatter();
-            Stream stream = new FileStream(ListaYoutuber.NOME_ARQUIVO, FileMode.Create, FileAccess.Write);
+            Stream stream = new FileStream(CadastroYoutuber.NOME_ARQUIVO, FileMode.Create, FileAccess.Write);
             binaryWritter.Serialize(stream, this);
             stream.Close();
         }
@@ -62,18 +62,16 @@ namespace CadastroPessoalYoutuber
         private void EscreverNoArquivoDosCadastroPessoal()
         {
             BinaryFormatter binaryWritter = new BinaryFormatter();
-            Stream stream = new FileStream(ListaYoutuber.NOME_ARQUIVO, FileMode.Create, FileAccess.Write);
+            Stream stream = new FileStream(CadastroYoutuber.NOME_ARQUIVO, FileMode.Create, FileAccess.Write);
             binaryWritter.Serialize(stream, this);
             stream.Close();
         }
 
-        internal void EditarCadastroPessoal(CadastroPessoal cadastropessoal, int posicao)
+        internal void EditarCadastroPessoal(CadastroPessoal cadastropessoal, int codigo)
         {
-            cadastroPessoals[posicao] = cadastropessoal;
+            cadastroPessoals[codigo] = cadastropessoal;
             EscreverNoArquivoDosCadastroPessoal();
         }
 
-
-        
     }
 }
