@@ -143,6 +143,10 @@ namespace CadastroPessoalYoutuber
             {
                 throw new Exception("Digite saua idade !!");
             }
+            if (idade < 18)
+            {
+                throw new Exception("Voce e menor de idade, pessa para um responsavel cadastrar seu canal para voce !!");
+            }
             this.Idade = idade;
         }
         public void SetRendaMensal(double rendamensal)

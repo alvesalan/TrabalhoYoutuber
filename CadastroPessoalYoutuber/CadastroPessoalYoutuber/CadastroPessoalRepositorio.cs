@@ -11,6 +11,7 @@ namespace CadastroPessoalYoutuber
     [Serializable]
     class CadastroPessoalRepositorio
     {
+
         List<CadastroPessoal> cadastroPessoals = new List<CadastroPessoal>();
 
         public CadastroPessoalRepositorio()
@@ -67,11 +68,10 @@ namespace CadastroPessoalYoutuber
             stream.Close();
         }
 
-        internal void EditarCadastroPessoal(CadastroPessoal cadastropessoal, int codigo)
+        internal void EditarCadastroPessoal(CadastroPessoal cadastropessoal,  int codigo)
         {
             cadastroPessoals[codigo] = cadastropessoal;
             EscreverNoArquivoDosCadastroPessoal();
         }
-
     }
 }

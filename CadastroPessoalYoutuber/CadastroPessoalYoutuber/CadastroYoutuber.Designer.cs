@@ -98,7 +98,7 @@
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BackColor = System.Drawing.Color.Maroon;
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(97, 41);
+            this.panel1.Location = new System.Drawing.Point(89, 41);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(571, 135);
             this.panel1.TabIndex = 0;
@@ -125,7 +125,7 @@
             this.panel2.Controls.Add(this.SENHA);
             this.panel2.Controls.Add(this.txtLogin);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Location = new System.Drawing.Point(88, 210);
+            this.panel2.Location = new System.Drawing.Point(80, 210);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(571, 253);
             this.panel2.TabIndex = 14;
@@ -210,7 +210,7 @@
             this.panel3.Controls.Add(this.txtNickName);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(79, 497);
+            this.panel3.Location = new System.Drawing.Point(71, 497);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(571, 510);
             this.panel3.TabIndex = 15;
@@ -419,7 +419,7 @@
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label9);
-            this.panel4.Location = new System.Drawing.Point(79, 1053);
+            this.panel4.Location = new System.Drawing.Point(71, 1053);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(571, 1511);
             this.panel4.TabIndex = 16;
@@ -824,8 +824,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "CadastroYoutuber";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Text = "Cadastro de youtuber";
             this.Load += new System.EventHandler(this.ListaYoutuber_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

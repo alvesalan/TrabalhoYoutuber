@@ -41,7 +41,6 @@ namespace CadastroPessoalYoutuber
             foreach (CadastroPessoal cadastropessoal in tudo.ObterPersonagens())
             {
                 dataGridView1.Rows.Add(new Object[]{
-
                 cadastropessoal.GetCodigo(),
                 cadastropessoal.GetLogin(),
                 cadastropessoal.GetSenha(),
@@ -105,11 +104,21 @@ namespace CadastroPessoalYoutuber
         {
             if (e.Modifiers == Keys.Control && e.KeyCode == Keys.T)
             {
-                ApagarYoutuber();
+                DialogResult resultado = MessageBox.Show("Deseja realmente apagar o arquivo ??", "AVISO", MessageBoxButtons.YesNo);
+                if (resultado == DialogResult.Yes)
+                {
+                    ApagarYoutuber();
+                }
+                else
+                {
+                    MessageBox.Show("Arquivo salvo com sucesso !!");
+                }
+                
             }
             if (e.Modifiers == Keys.Control && e.KeyCode == Keys.E)
             {
                 EditarPersonagem();
+ 
             }
 
         }
@@ -121,8 +130,7 @@ namespace CadastroPessoalYoutuber
                 MessageBox.Show("Selecione um registro para que seja possível editar");
                 return;
             }
-            int codigo = Convert.ToInt32(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString()); ;
-            new CadastroYoutuber(codigo).ShowDialog();
+            
         }
 
         
