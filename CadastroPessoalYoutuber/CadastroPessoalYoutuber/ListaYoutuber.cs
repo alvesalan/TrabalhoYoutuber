@@ -117,8 +117,10 @@ namespace CadastroPessoalYoutuber
             }
             if (e.Modifiers == Keys.Control && e.KeyCode == Keys.E)
             {
+                MessageBox.Show("Me desculpe professor mais não conseguir fazer algumas partes do editar por estar em telas diferentes mais vou tentar fazer ate conseguir terminar !! OBS: Na hora que chega na parte do codigo de abrir a janela para editar, não consigo relacionar a pagina com o codigo que esta no repositorio que e o cadastro escolhido para editar, abre a janela de cadastro mais não trais a informaçoes para editar. ");
                 EditarPersonagem();
- 
+
+
             }
 
         }
